@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; overflow-x: hidden;}
+body { margin: 0; font-family: Hind, Roboto, "Helvetica Neue", sans-serif; }
+
+/* This class actually belongs to search.component.html. Because the panel is in the overlay, the class needs to be in your global style. */
+.matAutocomplete {
+/*	max-width: 12.2em !important;*/
+	margin-left: 0.8em;
+}
+
+
+.mat-spinner {
+	margin:0 auto;
+}

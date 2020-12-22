@@ -1,0 +1,41 @@
+<body>
+	<div class="container-fluid p-0">
+		<div class="row">
+			<div class="col">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<a class="navbar-brand" (click) = "setIsCollapsedTrue('', $event);" href="/">Stock Search</a>
+					<button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active" id="search">
+								<a class="nav-link" (click) = "setIsCollapsedTrue('', $event);" href="/">Search</a>
+							</li>
+							<li class="nav-item" id="watchlist">
+								<a class="nav-link" (click) = "setIsCollapsedTrue('watchlist', $event);" href="/watchlist">Watchlist</a>
+							</li>
+							<li class="nav-item" id="portfolio">
+								<a class="nav-link" (click) = "setIsCollapsedTrue('portfolio', $event);" href="/portfolio">Portfolio</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row rorow">
+			<div class="col">
+				<router-outlet></router-outlet>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col myfooter">
+				Powered by Tiingo. Developed by Shreya Bhaumik.
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+</footer>

@@ -1,0 +1,51 @@
+.mat-display-3 {
+	font-family: 'Hind', sans-serif;
+	font-weight: 700;
+	font-size: 4.3em;
+	text-align: center;
+	margin-top: 15vh;
+}
+
+.form-group {
+	margin: 0;
+	position: absolute;
+	width: 14.3em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	outline: none;
+	box-shadow: 0 0 0 2.5px #673ab7; /*0.15em*/
+	border-radius: 25px;
+}
+
+input:focus {
+	box-shadow: none;
+}
+
+input[type="text"] {
+	outline: none;
+	border: transparent;
+	border-radius: 25px;
+	font-size: small;
+	padding-left: 0.8em;
+}
+
+.mat-button {
+	position: absolute;
+	top: 0.05em;
+	right: 0.8em;
+	border-style: none;
+}
+
+.mat-button:focus, .mat-button:active {
+	outline: none !important;
+	border:2px solid #ccc;
+	border-radius: 0.2em;
+}
+
+
+.bi-search {
+	margin-left: 0.1em; margin-right: 0.1em;
+	margin-top: 0.7em; margin-bottom: 0.5em;
+	vertical-align: middle;
+	display: inline-block;
+}

@@ -1,0 +1,46 @@
+<div class="w-responsive text-center mx-auto" id="wl-master-container">
+	<p class="text-left mat-display-1 mb-5" id="pgheading"><br>My Watchlist</p>
+	<div class="alert alert-warning" id="nostock" role="alert">
+		Currently you don't have any stock in your watchlist.
+	</div>
+	<mat-spinner diameter="50" *ngIf="isWLinLS && (!watchlist || !latestPrice)"></mat-spinner>
+	<span *ngIf="watchlist">
+		<div class="container-fluid p-0" *ngFor="let company of watchlist">
+			<div class="card wlcards myauto mb-3" id="{{ 'wlcard' + company[0] }}" style="width: 100%;"> <!--(click)=""-->
+				<div class="text-right">
+				<button type="button" class="close text-right mt-1 mr-2 mb-0" aria-label="Close" (click)="close(company[0])" style="width: 1em; height: 1em; font-weight: normal; text-align: right;">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="container card-body mt-0 pt-0" (click)="openDetails(company[0])">
+					<div class="row myrow1 mb-0">
+						<div class="col toLeft">
+							<p class="text-left mat-display-1 mt-0 mb-0" id="ticker">{{ company[1]?.ticker }}</p><!-- id="{{ 'ticker' + company[0] }}" -->
+						</div>
+						<div class="col toRight">
+							<p *ngIf="change[company[0]]>0" class="text-right mat-display-1 text-success" id="last"><!--28.52-->{{ last[company[0]] }}</p><!-- id="{{ 'last' + company[0] }}" -->
+							<p *ngIf="change[company[0]]<0" class="text-right mat-display-1 text-danger" id="last"><!--28.52-->{{ last[company[0]] }}</p><!-- id="{{ 'last' + company[0] }}" -->
+							<p *ngIf="change[company[0]]==0" class="text-right mat-display-1" id="last"><!--28.52-->{{ last[company[0]] }}</p><!-- id="{{ 'last' + company[0] }}" -->
+						</div>
+					</div>
+					<div class="row myrow2">
+						<div class="col toLeft">
+							<p class="text-left mat-headline" id="name">{{ company[1]?.name }}</p> <!--id="{{ 'compName' + company[0] }}"-->
+						</div>
+						<div class="col toRight">
+							<svg *ngIf="change[company[0]]>0" width="1em" height="1em" viewBox="0 0 20 20" class="bi bi-caret-up-fill text-success" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+							</svg>
+							<svg *ngIf="change[company[0]]<0" width="1em" height="1em" viewBox="0 0 20 20" class="bi bi-caret-down-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+							</svg>
+							<p *ngIf="change[company[0]]>0" class="text-right mat-headline text-success" id="changeAndAllP"><!--28.52-->{{ changeAndAll[company[0]] }}</p><!-- id="{{ 'changeAndAllP' + company[0] }}" -->
+							<p *ngIf="change[company[0]]<0" class="text-right mat-headline text-danger" id="changeAndAllP"><!--28.52-->{{ changeAndAll[company[0]] }}</p><!--  id="{{ 'changeAndAllP' + company[0] }}" -->
+							<p *ngIf="change[company[0]]==0" class="text-right mat-headline" id="changeAndAllP"><!--28.52-->{{ changeAndAll[company[0]] }}</p><!--  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</span>
+</div>

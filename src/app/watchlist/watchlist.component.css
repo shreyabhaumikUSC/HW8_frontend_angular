@@ -1,0 +1,53 @@
+#wl-master-container {
+	padding: 0;
+	min-width: 72%;
+  width: calc((26em - 100%) * 1000);
+  max-width: 95%;
+}
+
+.wlcards {
+	cursor: pointer;
+}
+
+/*[id^='changeAndAllP'] {*/
+#changeAndAllP {
+	display:inline-block;
+}
+
+.myrow1 .mat-display-1, .myrow2 .mat-headline {
+	margin: 0;
+}
+
+.mat-headline {
+	font-size: 1.15em;
+}
+
+.toLeft {
+	text-align: left;
+}
+
+.toRight {
+	text-align: right;
+}
+
+/*fonts*/
+#pgheading {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.4em;
+}
+
+#name, #ticker {
+	font-family: 'Hind', sans-serif;
+}
+
+#changeAndAllP, #last {
+	font-family: 'Average Sans', sans-serif;
+}
+
+#ticker {
+	font-size: 2em;
+}
+
+#last {
+	font-size: 1.8em;
+}

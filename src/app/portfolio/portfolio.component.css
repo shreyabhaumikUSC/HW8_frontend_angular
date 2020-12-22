@@ -1,0 +1,57 @@
+#pf-master-container {
+	padding: 0;
+	min-width: 72%;
+  width: calc((26em - 100%) * 1000);
+  max-width: 95%;
+}
+
+/*[id^='change'] {*/
+#change {
+	display:inline-block;
+}
+
+.close {
+		right: 0.5em;
+}
+
+.card-header {
+	cursor: pointer;
+}
+
+.toLeft {
+	text-align: left;
+}
+
+.toRight {
+	text-align: right;
+}
+
+/*fonts*/
+#pgheading {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.4em;
+}
+
+.mat-body-1 {
+	font-family: 'Hind', sans-serif;
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+#change, #last, #mktVal, #qty, #avgC, #totC {
+	font-family: 'Average Sans', sans-serif;
+	font-size: 1.2em;
+}
+
+.mat-headline {
+	font-size: 1.8em;
+	font-stretch: extra-expanded;
+}
+
+.text-secondary {
+	font-size: 0.7em;
+}
+
+#ticker {
+	font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,169 @@
+#my-master-container {
+	padding: 0;
+	min-width: 72%;
+  width: calc((26em - 100%) * 1000);
+  max-width: 85%;
+}
+
+#invalid-ticker {
+  color: black;
+  font-weight: 300;
+	min-width: 72%;
+  width: calc((30em - 100%) * 1000);
+  max-width: 95%;
+}
+
+.container, .container-fluid {
+  margin: 0;
+	margin-top: 1.5em;
+}
+
+/*to remove the pagination buttons that sometimes came*/
+::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+}
+
+.mat-tab-label-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    z-index: 1;
+    overflow-x: scroll !important;
+}
+
+#high, #mid, #low, #askP, #askS, #bidP, #bidS, #open, #prevClose, #vol {
+    display: inline-block;
+    position: absolute;
+}
+
+.myrow1 .mat-display-1, .myrow2 .mat-headline, .myrow3 .mat-body-2 {
+		font-family: 'Hind';
+}
+
+.myrow1 .mat-display-1, .myrow2 .mat-headline, .myrow3 .mat-body-2 {
+	margin: 0;
+}
+
+#descHead, #priceSummary {
+    text-align: center;
+}
+
+.myrow1 .mat-display-1 {
+	font-size: 3em;
+	font-weight: 500;
+}
+
+.myrow3 .mat-body-2 {
+	font-weight: normal;
+}
+
+.toLeft {
+	margin: 0 !important;
+	padding-left: 0 !important;
+	text-align: left;
+}
+
+.toRight {
+	margin: 0;
+	padding-right: 0 !important;
+	text-align: right;
+}
+#changeAndAllP {
+	display:inline-block;
+}
+
+#ticker, .bi-star {
+	text-align: left;
+	display:inline-block;
+	margin:0;
+	padding: 0;
+}
+
+#openclose {
+	padding: 0;
+	display: inline-block;
+	border: none;
+	border-radius: 0;
+	font-weight: normal;
+}
+
+.mynewscards {
+		cursor: pointer;
+}
+.mynewscards .card-body {
+	text-align: left;
+}
+
+.modal-title {
+		font-weight: 400;
+		font-size: 2em;
+}
+
+.modal-subtitle {
+		font-size: 1em;
+		font-weight: bold;
+		color: grey;
+}
+
+.close {
+		right: 0.5em;
+}
+
+.modal-body-title {
+		font-size: 1.3em;
+		font-weight: 500;
+}
+
+.modal-body-link {
+		color: grey;
+}
+
+button[aria-label="Close"]:focus {
+  outline: none;
+}
+
+#qty {
+	padding: 0.4em;
+	padding-left: 0.6em;
+}
+
+/*fonts*/
+#ticker, #compName, #exchangeCode, #descHead {
+	font-family: 'Hind', sans-serif;
+}
+
+ #last, #changeAndAllP, #currentTime {
+	font-family: 'Average Sans', sans-serif;
+}
+
+#ticker {
+	font-size: 3em;
+}
+
+#last {
+	font-size: 2.6em;
+}
+
+#compName {
+	font-size: 2em;
+}
+
+#descHead {
+	font-size: 1.3em;
+	font-weight: 500;
+}
+
+#newsSN, #newsPA {
+	font-family: 'Roboto', sans-serif;
+}
+
+#newsPA {
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+/*
+@media (min-width: 767px) {
+    
+}
+*/
